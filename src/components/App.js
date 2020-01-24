@@ -8,32 +8,34 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allFilms: [],
+      films: [],
       searchFilm: ''
     };
+    console.log(this.state.films);
   }
 
   //API call
 
   componentDidMount() {
 
-    dataFilms().then(allFilms => this.setState({ allFilms }));
-    console.log(this.setState.allFilms)
+    dataFilms().then(films => this.setState({ films }));
+
   }
 
 
   render() {
+
     return (
       <div className="App" >
         <Header />
         <Switch>
           <Route exact path='/'>
             <header className="App-header">
-              <p>
+              <p className="App-header">
                 Edit <code>src/App.js</code> and save to reload.
         </p>
-              Learn React
-      </header>
+
+            </header>
           </Route>
         </Switch>
       </div >

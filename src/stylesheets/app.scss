@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App-header {
+  background-image: url("../images/studio-ghibli.png");
+  height: 60vh;
+}
 @font-face {
   font-family: "Ghibli Regular";
   font-style: normal;
