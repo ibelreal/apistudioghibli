@@ -2,7 +2,9 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { dataFilms } from '../services/api';
 import Header from './Header';
-import '../stylesheets/app.scss'
+import Filters from './Filters';
+import FilmList from './FilmList';
+import '../stylesheets/app.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,31 +13,25 @@ class App extends React.Component {
       films: [],
       searchFilm: ''
     };
-    console.log(this.state.films);
   }
 
   //API call
 
   componentDidMount() {
-
     dataFilms().then(films => this.setState({ films }));
-
   }
 
 
   render() {
-
+    console.log(this.state)
     return (
       <div className="App" >
         <Header />
         <Switch>
           <Route exact path='/'>
-            <header className="App-header">
-              <p className="App-header">
-                Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-            </header>
+            <header className="App-header" />
+            <Filters />
+            <FilmList films={this.state.films} />
           </Route>
         </Switch>
       </div >
