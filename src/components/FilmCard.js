@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 function FilmCard(props) {
-    console.log(props)
     return (
         <div>
             <h2>Title: {props.filmItem.title}</h2>
@@ -11,7 +10,9 @@ function FilmCard(props) {
 }
 
 FilmCard.propTypes = {
-    films: PropTypes.object
+    filmsItem: PropTypes.shape({
+        title: PropTypes.string
+    })
 };
 
 export default FilmCard;

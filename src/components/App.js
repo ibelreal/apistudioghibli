@@ -13,12 +13,19 @@ class App extends React.Component {
       films: [],
       searchFilm: ''
     };
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   //API call
 
   componentDidMount() {
     dataFilms().then(films => this.setState({ films }));
+  }
+
+  //Search events
+
+  handleSearch(searchFilm) {
+    this.setState({ searchFilm });
   }
 
 
@@ -30,7 +37,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/'>
             <header className="App-header" />
-            <Filters />
+            <Filters handleSearch={this.handleSearch} value={this.state.searchText} />
             <FilmList films={this.state.films} />
           </Route>
         </Switch>
