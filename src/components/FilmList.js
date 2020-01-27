@@ -1,11 +1,11 @@
 import React from 'react';
 import FilmCard from './FilmCard';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import '../stylesheets/filmList.scss'
 
 function FilmList(props) {
-    console.log(props)
     return (
-        <ul>
+        <ul className="cards">
             {props.filterBySearch.map(filmItem => (
                 <li key={filmItem.id} className="list__item">
                     <FilmCard filmItem={filmItem} />

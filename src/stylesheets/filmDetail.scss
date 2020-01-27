@@ -1,0 +1,18 @@
+.card__detail {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: powderblue;
+  &--title {
+    color: pink;
+    font-family: Gugi, cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+  }
+  &--button {
+    margin: 30px;
+  }
+}
