@@ -7,7 +7,7 @@ function Filters(props) {
         event.preventDefault();
     };
     const handleSearch = event => {
-        const searchFilm = event.target.value;
+        const searchFilm = event.target.value.trim().toLowerCase();
         props.handleSearch(searchFilm);
     };
     return (

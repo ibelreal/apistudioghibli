@@ -3,20 +3,20 @@ import FilmCard from './FilmCard';
 import PropTypes from "prop-types";
 
 function FilmList(props) {
+    console.log(props)
     return (
         <ul>
-            {props.films.map(filmItem => (
+            {props.filterBySearch.map(filmItem => (
                 <li key={filmItem.id} className="list__item">
                     <FilmCard filmItem={filmItem} />
                 </li>
             ))}
-
         </ul>
     )
 }
 
 FilmList.propTypes = {
-    films: PropTypes.arrayOf(PropTypes.object).isRequired,
+    filterBySearch: PropTypes.array.isRequired
 };
 
 export default FilmList;

@@ -14,6 +14,7 @@ class App extends React.Component {
       searchFilm: ''
     };
     this.handleSearch = this.handleSearch.bind(this);
+    this.filterBySearch = this.filterBySearch.bind(this);
   }
 
   //API call
@@ -26,8 +27,17 @@ class App extends React.Component {
 
   handleSearch(searchFilm) {
     this.setState({ searchFilm });
+    console.log(`Actualizando: ${searchFilm}`)
   }
 
+  //Filter of films
+  filterBySearch() {
+    return (
+      this.state.films.filter(film => {
+        return film.title.trim().toLowerCase().includes(this.state.searchFilm);
+      })
+    );
+  }
 
   render() {
     console.log(this.state)
@@ -38,7 +48,7 @@ class App extends React.Component {
           <Route exact path='/'>
             <header className="App-header" />
             <Filters handleSearch={this.handleSearch} value={this.state.searchText} />
-            <FilmList films={this.state.films} />
+            <FilmList filterBySearch={this.filterBySearch()} />
           </Route>
         </Switch>
       </div >
