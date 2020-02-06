@@ -5,6 +5,7 @@ import Header from './Header';
 import Filters from './Filters';
 import FilmList from './FilmList';
 import FilmDetail from './FilmDetail';
+import movies from '../data/movies.json';
 import '../stylesheets/app.scss';
 
 class App extends React.Component {
@@ -22,7 +23,16 @@ class App extends React.Component {
   //API call
 
   componentDidMount() {
-    dataFilms().then(films => this.setState({ films }));
+    dataFilms().then(films => {
+      for (let i = 0; i < films.length; i++) {
+        for (let j = 0; j < movies.length; j++) {
+          if (films[i].title === movies[j].name) {
+            films[i].urlCover = movies[j].url
+          }
+        }
+      }
+      return this.setState({ films });
+    });
   }
 
   //Search events

@@ -7,7 +7,7 @@ const FilmDetail = (props) => {
     const { title, description, director, producer, release_date, rt_score } = props.films;
     return (
         <React.Fragment>
-            <div lassName="card--detail container">
+            <div className="card--detail container">
                 <Link to='/'>
                     <button className="fas fa-backward card__detail--button"> BACK </button>
                 </Link>
