@@ -4,16 +4,18 @@ import PropTypes from 'prop-types';
 import '../stylesheets/filmDetail.scss'
 
 const FilmDetail = (props) => {
-    const { title, description, director, producer, release_date, rt_score } = props.films;
+    const { title, description, director, producer, release_date, rt_score, urlCover } = props.films;
     return (
         <React.Fragment>
             <div className="card--detail container">
-                <Link to='/'>
-                    <button className="fas fa-backward card__detail--button"> BACK </button>
-                </Link>
                 <div className="card__detail">
+                    <Link to='/'>
+                        <button className="fas fa-backward card__detail--button"> BACK </button>
+                    </Link>
                     <h3 className="card__detail--title">{title}</h3>
-                    {/* <img className="card--detail__image" src={image} alt={title} /> */}
+                    <div>
+                        <img className="card__detail--image" src={urlCover} alt={title} />
+                    </div>
                     <p className="card__detail--description">{description}</p>
                     <ul>
                         <li className="card__detail--text">Director: {director}</li>

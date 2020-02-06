@@ -6,11 +6,17 @@ import '../stylesheets/filmList.scss'
 function FilmList(props) {
     return (
         <ul className="cards">
-            {props.filterBySearch.sort((a, b) => a.title.localeCompare(b.title)).map(filmItem => (
-                <li key={filmItem.id} className="list__item">
-                    <FilmCard filmItem={filmItem} />
-                </li>
-            ))}
+            {(props.isSorted === true)
+                ? props.filterBySearch.sort((a, b) => a.title.localeCompare(b.title)).map(filmItem => (
+                    <li key={filmItem.id} className="list__item">
+                        <FilmCard filmItem={filmItem} />
+                    </li>
+                ))
+                : props.filterBySearch.map(filmItem => (
+                    <li key={filmItem.id} className="list__item">
+                        <FilmCard filmItem={filmItem} />
+                    </li>
+                ))}
         </ul>
     )
 }

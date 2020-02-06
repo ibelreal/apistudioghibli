@@ -11,6 +11,11 @@ function Filters(props) {
         const searchFilm = event.target.value.trim().toLowerCase();
         props.handleSearch(searchFilm);
     };
+    const handleSorted = event => {
+        console.log('Qué pasa:' + props.isSorted)
+        props.handleSorted();
+    };
+
     return (
         <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="searchFilm">Search for a film: </label>
@@ -20,9 +25,17 @@ function Filters(props) {
                 name="searchFilm"
                 id="searchFilm"
                 placeholder="My neighbor Totoro"
-                value={props.value}
+                value={props.valueText}
                 onChange={handleSearch}
             />
+            <label>
+                A to Z:
+                <input
+                    name="isSorted"
+                    type="checkbox"
+                    checked={props.isSorted}
+                    onChange={handleSorted} />
+            </label>
         </form>
     )
 }

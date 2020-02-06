@@ -13,11 +13,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       films: [],
-      searchFilm: ''
+      searchFilm: '',
+      isSorted: false
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.filterBySearch = this.filterBySearch.bind(this);
     this.renderFilmsDetail = this.renderFilmsDetail.bind(this);
+    this.handleSorted = this.handleSorted.bind(this);
   }
 
   //API call
@@ -41,6 +43,13 @@ class App extends React.Component {
     this.setState({ searchFilm });
   }
 
+  //Sorted List
+  handleSorted() {
+    (this.state.isSorted === false)
+      ? this.setState({ isSorted: true })
+      : this.setState({ isSorted: false });
+  }
+
   //Filter of films
   filterBySearch() {
     return (
@@ -57,8 +66,8 @@ class App extends React.Component {
     const films = this.state.films.find(item => {
       return item.id === routeId
     });
-    if (films === undefined) {
-      return <p>Ups...the film you are looking for doesn't exist</p>
+    if (!films) {
+      return (<p>Ups...the film you are looking for doesn't exist</p>);
     }
     else {
       return < FilmDetail films={films} />
@@ -74,8 +83,8 @@ class App extends React.Component {
           <Route exact path='/'>
             <header />
             <div className="App__background">
-              <Filters handleSearch={this.handleSearch} value={this.state.searchText} />
-              <FilmList filterBySearch={this.filterBySearch()} />
+              <Filters handleSearch={this.handleSearch} valueText={this.state.searchText} handleSorted={this.handleSorted} isSorted={this.state.isSorted} />
+              <FilmList filterBySearch={this.filterBySearch()} isSorted={this.state.isSorted} />
             </div>
           </Route>
           <Route path='/films/:id' render={this.renderFilmsDetail} />
