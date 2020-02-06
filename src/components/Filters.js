@@ -11,9 +11,13 @@ function Filters(props) {
         const searchFilm = event.target.value.trim().toLowerCase();
         props.handleSearch(searchFilm);
     };
-    const handleSorted = event => {
-        console.log('Qué pasa:' + props.isSorted)
+    const handleSorted = () => {
         props.handleSorted();
+    };
+    const handleSelectDirector = ev => {
+        props.handleSelectDirector({
+            selectDirector: ev.target.value
+        });
     };
 
     return (
@@ -36,6 +40,22 @@ function Filters(props) {
                     checked={props.isSorted}
                     onChange={handleSorted} />
             </label>
+            <div className='filter__specie'>
+                <label className='filter__label'>Director: </label>
+                <select
+                    className='filter__input'
+                    onChange={handleSelectDirector}
+                    value={props.selectDirector}>
+                    <option value=""> All </option>
+                    <option value="Gorō Miyazaki" >Gorō Miyazaki</option>
+                    <option value="Hayao Miyazaki" >Hayao Miyazaki</option>
+                    <option value="Hiromasa Yonebayashi" >Hiromasa Yonebayashi</option>
+                    <option value="Hiroyuki Morita" >Hiroyuki Morita</option>
+                    <option value="Isao Takahata" >Isao Takahata</option>
+                    <option value="Yoshifumi Kondō" >Yoshifumi Kondō</option>
+                </select>
+            </div>
+
         </form>
     )
 }

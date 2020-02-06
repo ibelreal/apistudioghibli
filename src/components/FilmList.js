@@ -7,12 +7,12 @@ function FilmList(props) {
     return (
         <ul className="cards">
             {(props.isSorted === true)
-                ? props.filterBySearch.sort((a, b) => a.title.localeCompare(b.title)).map(filmItem => (
+                ? props.filterFilms.sort((a, b) => a.title.localeCompare(b.title)).map(filmItem => (
                     <li key={filmItem.id} className="list__item">
                         <FilmCard filmItem={filmItem} />
                     </li>
                 ))
-                : props.filterBySearch.map(filmItem => (
+                : props.filterFilms.map(filmItem => (
                     <li key={filmItem.id} className="list__item">
                         <FilmCard filmItem={filmItem} />
                     </li>
@@ -22,7 +22,8 @@ function FilmList(props) {
 }
 
 FilmList.propTypes = {
-    filterBySearch: PropTypes.array.isRequired
+    filterFilms: PropTypes.array.isRequired,
+    isSorted: PropTypes.bool
 };
 
 export default FilmList;
