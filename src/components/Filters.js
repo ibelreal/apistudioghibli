@@ -22,28 +22,31 @@ function Filters(props) {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
-            <label htmlFor="searchFilm">Search for a film: </label>
-            <input
-                className="form__searchBar"
-                type="text"
-                name="searchFilm"
-                id="searchFilm"
-                placeholder="My neighbor Totoro"
-                value={props.valueText}
-                onChange={handleSearch}
-            />
-            <label>
-                A to Z:
+            <div className='filter filter__film'>
+                <label htmlFor="searchFilm" className="filter__film label">Search for a film: </label>
                 <input
+                    className="filter__film input"
+                    type="text"
+                    name="searchFilm"
+                    id="searchFilm"
+                    placeholder="My neighbor Totoro"
+                    value={props.valueText}
+                    onChange={handleSearch}
+                />
+            </div>
+            <div className='filter filter__sort'>
+                <label htmlFor="isSorted" className='filter__sort label'>A to Z: </label>
+                <input
+                    className='filter__sort checkbox'
                     name="isSorted"
                     type="checkbox"
                     checked={props.isSorted}
                     onChange={handleSorted} />
-            </label>
-            <div className='filter__specie'>
-                <label className='filter__label'>Director: </label>
+            </div>
+            <div className='filter filter__director'>
+                <label className='filter__director label'>Director: </label>
                 <select
-                    className='filter__input'
+                    className='filter__director select'
                     onChange={handleSelectDirector}
                     value={props.selectDirector}>
                     <option value=""> All </option>
