@@ -1,6 +1,8 @@
 # Studio Ghibli App project
 
-Link al servidor de GitHub Pages: https://ibelreal.github.io/apistudioghibli/
+Link to server of GitHub Pages: https://ibelreal.github.io/apistudioghibli/
+
+Link to server of Heroku: https://appghibli.herokuapp.com/#/
 
 ### Description
 
