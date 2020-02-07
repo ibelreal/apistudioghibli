@@ -24,5 +24,5 @@ To saw it in local, you need to clone the repository, introduce `npm install` an
 [x] Performance (loading and rendering): The app will bring the data from the API. Using states and props the data can be show to the user all the time.
 
 ## Bonus Requirements undeveloped:
-[] Testing: I don't have much practice in testing with Javascript yet, so i wasn't sure how to do it. But it will be an issue that will be solved in the future.
+[ ] Testing: I don't have much practice in testing with Javascript yet, so i wasn't sure how to do it. But it will be an issue that will be solved in the future.
 
