@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Studio Ghibli App project
 
-## Available Scripts
+Link al servidor de GitHub Pages: https://ibelreal.github.io/apistudioghibli/
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+Hello, this is mi solution to a technical test, in which, you have to create an app connected to an external API and show results from it.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To saw it in local, you need to clone the repository, introduce `npm install` and execute `npm start` in the terminal and it will be open in [http://localhost:3000](http://localhost:3000)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Technical Requirements:
 
-### `npm test`
+[x] The app should be done in React
+[x] The app should be compatible with IE11+.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Non-Requirements developed:
 
-### `npm run build`
+[x] Image of the films: Using a JSON i added the image url of the movie. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bonus Requirements developed:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[x] Mobile support: I used `SASS` to adapt the web so it could be `Responsive` and available in all devices.
+[x] User interface: Ghibli Studios films are quite famous for their animation so i tried to put a litle bit of their magic in the interface of the App.
+[x] Performance (loading and rendering): The app will bring the data from the API. Using states and props the data can be show to the user all the time.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Bonus Requirements undeveloped:
+[] Testing: I don't have much practice in testing with Javascript yet, so i wasn't sure how to do it. But it will be an issue that will be solved in the future.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
