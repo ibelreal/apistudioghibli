@@ -1,4 +1,4 @@
-const ENDPOINT = 'https://ghibliapi.herokuapp.com/films';
+const ENDPOINT = 'https://ghibliapi.vercel.app/films';
 
 const dataFilms = () => fetch(ENDPOINT)
     .then(response => response.json())
