@@ -2,6 +2,10 @@
   "name": "my-studio-ghibli",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,9 +14,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-loading": "^2.0.3",
-    "react-loadingg": "^1.7.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "sass": "^1.99.0"
   },
   "scripts": {
