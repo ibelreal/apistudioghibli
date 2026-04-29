@@ -1,25 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.30722802.chunk.css",
-    "main.js": "./static/js/main.c215155b.chunk.js",
-    "main.js.map": "./static/js/main.c215155b.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.ecf0a1c5.js",
-    "runtime-main.js.map": "./static/js/runtime-main.ecf0a1c5.js.map",
-    "static/js/2.d298fce6.chunk.js": "./static/js/2.d298fce6.chunk.js",
-    "static/js/2.d298fce6.chunk.js.map": "./static/js/2.d298fce6.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.1426999258cde586014a9ccc5c8812f8.js": "./precache-manifest.1426999258cde586014a9ccc5c8812f8.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.30722802.chunk.css.map": "./static/css/main.30722802.chunk.css.map",
-    "static/js/2.d298fce6.chunk.js.LICENSE": "./static/js/2.d298fce6.chunk.js.LICENSE",
-    "static/media/logo2.svg": "./static/media/logo2.d5bd44dd.svg",
-    "static/media/app.scss": "./static/media/studio-ghibli.38642346.png",
-    "static/media/header.scss": "./static/media/totoro.0c824245.gif"
+    "main.css": "/apistudioghibli/static/css/main.a61de9f2.css",
+    "main.js": "/apistudioghibli/static/js/main.447f5c68.js",
+    "static/media/totoro.gif": "/apistudioghibli/static/media/totoro.029e654b3cea787b1665.gif",
+    "static/media/studio-ghibli.png": "/apistudioghibli/static/media/studio-ghibli.a82d4904bbaac9d22f21.png",
+    "static/media/logo2.svg": "/apistudioghibli/static/media/logo2.35cf807fb3f61304ff1f8383b446871e.svg",
+    "index.html": "/apistudioghibli/index.html",
+    "main.a61de9f2.css.map": "/apistudioghibli/static/css/main.a61de9f2.css.map",
+    "main.447f5c68.js.map": "/apistudioghibli/static/js/main.447f5c68.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ecf0a1c5.js",
-    "static/js/2.d298fce6.chunk.js",
-    "static/css/main.30722802.chunk.css",
-    "static/js/main.c215155b.chunk.js"
+    "static/css/main.a61de9f2.css",
+    "static/js/main.447f5c68.js"
   ]
 }
