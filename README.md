@@ -1,34 +1,67 @@
 # Studio Ghibli App project
 
-Link to server of GitHub Pages: https://ibelreal.github.io/apistudioghibli/
-
-Link to server of Heroku: https://appghibli.herokuapp.com/#/
+Live Demo: https://ibelreal.github.io/apistudioghibli/
 
 ### Description
 
-Hello, this is mi solution to a technical test, in which, you have to create an app connected to an external API and show results from it.
+This project is a solution to a technical test. The goal was to build a web application that connects to an external API and displays its data in a user-friendly interface.
 
-To saw it in local, you need to clone the repository, introduce `npm install` and execute `npm start` in the terminal and it will be open in [http://localhost:3000](http://localhost:3000)
+The app consumes data from a Studio Ghibli API and presents information about films, focusing on usability, responsiveness, and performance.
 
-## Technical Requirements:
+## Technologies Used
 
-[x] The app should be done in React
+- React
+- JavaScript
+- Sass
+- Mapbox GL JS (Dependency)
 
-[x] The app should be compatible with IE11+.
+## Project Structure
+```
+src/
+├── components/     # Reusable UI components
+├── data/           # Static data (e.g., image mappings)
+├── images/         # Local assets
+├── services/       # API calls and external services
+└── stylesheets/    # SCSS files
+```
+## Getting Started
 
-## Non-Requirements developed:
+1. Clone the repository
+ ```bash
+   git clone <repository-url>
+   cd <project-folder>
+```
+2. Install dependencies
+ ```bash
+   npm install
+```
+3. Start the development server
+ ```bash
+   npm start
+```
+The project will run at [http://localhost:3000](http://localhost:3000)
 
-[x] Image of the films: Using a JSON i added the image url of the movie. 
+## Technical Requirements
 
-## Bonus Requirements developed:
+✔ Built using React
 
-[x] Mobile support: I used `SASS` to adapt the web so it could be `Responsive` and available in all devices.
+✔ Compatible with IE11 and above
 
-[x] User interface: Ghibli Studios films are quite famous for their animation so i tried to put a litle bit of their magic in the interface of the App.
+## Implemented Features
 
-[x] Performance (loading and rendering): The app will bring the data from the API. Using states and props the data can be show to the user all the time.
+✔ **Film Images:**
+Since the API does not provide images, a local JSON file is used to map each movie to its corresponding image URL.
 
-## Bonus Requirements undeveloped:
+✔ **Responsive Design:**
+  Implemented using Sass to ensure compatibility across mobile, tablet, and desktop devices.
 
-[ ] Testing: I don't have much practice in testing with Javascript yet, so i wasn't sure how to do it. But it will be an issue that will be solved in the future.
+✔ **User Interface:**
+  Inspired by the visual style of Studio Ghibli films, aiming to reflect their artistic identity.
 
+✔ **Performance:**
+  Efficient data handling using React state and props to ensure smooth rendering and user interaction.
+
+## Pending / Future Improvements
+
+✘ **Testing:**
+  Automated testing is not yet implemented. Adding unit and integration tests is planned for future iterations.
